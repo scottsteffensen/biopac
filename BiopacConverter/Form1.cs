@@ -130,7 +130,7 @@ namespace BiopacConverter
                 }
             }
 
-            using (StreamWriter outputFile = new StreamWriter(outputDirectory + openFileDialog1.SafeFileName))
+            using (StreamWriter outputFile = new StreamWriter(outputDirectory + "\\" + openFileDialog1.SafeFileName + ".csv"))
             {
                 string titleLine = "";
                 for (int j = 0; j < channels.Count(); j++)
@@ -148,6 +148,7 @@ namespace BiopacConverter
                     }
                     outputFile.WriteLine(line);
                 }
+                textBox1.AppendText("DONE!!");
             }
 
         }
